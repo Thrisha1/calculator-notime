@@ -1,0 +1,66 @@
+<!-- calculator -->
+<!-- FILEPATH: /c:/Users/thris/Desktop/Notime Project/calculator.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graphical Calculator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <div class="grid grid-cols-4 gap-4 mb-4">
+            </div>
+            <div class="mb-4">
+                <input type="text" id="display" class="w-full bg-gray-200 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" />
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('7')">7</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('8')">8</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('9')">9</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('-')">-</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('4')">4</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('5')">5</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('6')">6</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('+')">+</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('1')">1</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('2')">2</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('3')">3</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('*')">*</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('0')">0</button>
+                <button class="col-span-2  bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="calculate()">=</button>
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="addToDisplay('/')">/</button>
+                <button class="col-span-4 bg-gray-200 hover:bg-gray-300 rounded-lg py-2 px-4 text-lg font-bold text-gray-700" onclick="clearDisplay()">C</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script>
+        let display = document.getElementById('display');
+        let expression = '';
+
+        function addToDisplay(value) {
+            expression += value;
+            display.value = expression;
+        }
+
+        function clearDisplay() {
+            expression = '';
+            display.value = '';
+        }
+
+        function calculate() {
+            try {
+                let result = eval(expression);
+                expression = result.toString();
+                display.value = expression;
+            } catch (error) {
+                alert('Invalid expression');
+            }
+        }
+    </script> -->
+</body>
+<script src="calc.js" ></script>
+</html>
