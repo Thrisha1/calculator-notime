@@ -8,6 +8,7 @@ function addToDisplay(val) {
     expression = expression + val;
 
     display.value = expression;
+    console.log(expression);
 }
 
 function calculate(){
