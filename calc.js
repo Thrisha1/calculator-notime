@@ -9,6 +9,8 @@ function addToDisplay(val) {
 
     display.value = expression;
     console.log(expression);
+
+    console.log("hello world");
 }
 
 function calculate(){
